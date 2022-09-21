@@ -11,7 +11,14 @@
   </head>
 
   <body>
-  <h2> <%= link_to "Kittens API", root_path %> </h2>
+    <h2> <%= link_to "Kittens API", root_path %> </h2>
+  
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %><br />
+      </div>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
