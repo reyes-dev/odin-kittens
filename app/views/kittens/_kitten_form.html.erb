@@ -1,0 +1,11 @@
+<%= form_with model: @kitten do |f| %>
+  <p>Name: </p>
+  <%= f.text_field :name %>
+  <p>Age: </p>
+  <%= f.number_field :age, in: 0..20, step: 1 %>
+  <p>Cuteness: </p>
+  <%= f.number_field :cuteness, in: 1..10, step: 1 %>
+  <p>Softness: </p>
+  <%= f.number_field :softness, in: 1..10, step: 1 %>
+  <%= f.submit "Create Kitten" %>
+<% end %>

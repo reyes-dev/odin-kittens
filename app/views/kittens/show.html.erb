@@ -1,0 +1,9 @@
+<%= @kitten.name %>
+<%= @kitten.age %>
+<%= @kitten.cuteness %>
+<%= @kitten.softness %>
+
+<%= link_to "Edit Kitten", edit_kitten_path %>
+<%= link_to "Destroy Kitten", kitten_path(@kitten), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?" }%>
